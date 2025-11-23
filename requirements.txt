@@ -1,0 +1,13 @@
+pandas
+numpy
+requests
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+seaborn
+matplotlib
+pyodbc
+dotenv
+mssql-python
+plotly
