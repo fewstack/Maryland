@@ -1,5 +1,9 @@
 # Maryland Data Analysis Project
 
+## ⚠️ Disclaimer
+
+**This is a personal learning project and is not intended for business use or meaningful public consumption. The analyses, code, and findings are for educational purposes only. Use at your own risk. No warranties or guarantees are provided regarding the accuracy, completeness, or reliability of any information or code in this repository.**
+
 ## Overview
 This project contains data analysis and visualization work for Maryland state data, including operating budget analysis, grant and loan data, and per capita personal income studies.
 
@@ -55,8 +59,12 @@ Please ensure all sensitive data and credentials are kept in `.env` files and ne
 
 ## License
 
-[Specify your license here]
+MIT License
 
-## Contact
+Copyright (c) 2025
 
-[Add contact information]
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
