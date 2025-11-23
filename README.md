@@ -25,7 +25,7 @@ Contains analysis of Maryland grant and loan programs.
 
 1. Clone this repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/fewstack/Maryland.git
 cd Maryland
 ```
 
