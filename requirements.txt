@@ -11,3 +11,4 @@ pyodbc
 dotenv
 mssql-python
 plotly
+agent-framework
