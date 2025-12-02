@@ -1,34 +1,27 @@
 import asyncio
-import os
-from dotenv import load_dotenv
 from agent_framework import ChatAgent
 from agent_framework.azure import AzureAIAgentClient
 from azure.identity.aio import AzureCliCredential
+import os
+import dotenv
+dotenv.load_dotenv()
 
-# Load environment variables from .env file
-load_dotenv()
+Azure_AI_Foundry_project_endpoint = os.getenv("Azure_AI_Foundry_project_endpoint")
+Azure_AI_Model_Deployment = os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT_NAME")
+
 
 async def main():
-    # Get the Azure AI project endpoint from environment variable
-    project_endpoint = os.environ.get("Azure_AI_Foundry_project_endpoint")
-    Azure_Ai_Model_Deployment = os.environ.get("Azure_Ai_Model_Deployment")
-    
-    if not project_endpoint:
-        raise ValueError("Please set the 'Azure_AI_Foundry_project_endpoint' environment variable.")
-    
-    async with (
-        AzureCliCredential() as credential,
-        
-        ChatAgent(
+    async with AzureCliCredential() as credential:
+        async with ChatAgent(
             chat_client=AzureAIAgentClient(
                 async_credential=credential,
-                project_endpoint=project_endpoint
+                project_endpoint=Azure_AI_Foundry_project_endpoint,
+                model_deployment_name=Azure_AI_Model_Deployment
             ),
-            instructions="You are good at telling jokes."
-        ) as agent,
-    ):
-        result = await agent.run("Tell me a joke about a pirate.")
-        print(result.text)
+            instructions="You are a dental insurance agent and analyst"
+        ) as agent:
+            result = await agent.run("How are dental insurance carriers doing in 2025?")
+            print(result.text)
 
 if __name__ == "__main__":
     asyncio.run(main())
